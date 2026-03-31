@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary-orange: #FF6B00;
+  --color-primary-blue: #004AAD;
+  --color-neutral-soft: #F0F4F8;
+  
+  --font-sans: "Quicksand", "Comic Neue", cursive, sans-serif;
+  --font-display: "Comic Neue", "Quicksand", cursive, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Reduced from 18px */
+  }
+  body {
+    @apply bg-neutral-soft text-slate-900 font-sans;
+    line-height: 1.5;
+  }
+}
+
+.glass-card {
+  @apply bg-white/90 backdrop-blur-lg border border-white/30 shadow-xl;
+}
+
+.btn-primary {
+  @apply px-8 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 active:scale-95 text-base;
+}
+
+.section-padding {
+  @apply py-20 px-6; /* Reduced from py-32 */
+}
+
+.orange-gradient {
+  background: linear-gradient(135deg, #FF6B00 0%, #FF9E00 100%);
+}
+
+.blue-gradient {
+  background: linear-gradient(135deg, #004AAD 0%, #0077FF 100%);
+}
+
+/* Custom animations for page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}

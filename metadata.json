@@ -1,0 +1,7 @@
+{
+  "name": "Eco-Fibre Network Solutions",
+  "description": "Premium ISP providing reliable internet to homes, businesses, schools, and churches in Kenya.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
