@@ -163,14 +163,14 @@ export default function Home() {
               { 
                 icon: <Target size={32} />, 
                 title: 'Our Mission', 
-                desc: 'To empower the people of Rongo and beyond by providing affordable, high-speed fiber connectivity that bridges the digital divide.',
+                desc: 'To deliver innovative, customer-focused internet solutions that enhance communication, education, business growth, and community development through reliable fibre optic connectivity.',
                 image: '/mission.png',
                 color: 'text-primary-orange'
               },
               { 
                 icon: <Eye size={32} />, 
                 title: 'Our Vision', 
-                desc: 'To be the leading ISP in South Nyanza, recognized for transforming lives through innovative and sustainable digital solutions.',
+                desc: 'To be the most trusted provider of affordable, high-speed fibre internet solutions in East Africa, empowering individuals, businesses, and communities to thrive in the digital age.',
                 image: '/vision.png',
                 color: 'text-primary-blue'
               },

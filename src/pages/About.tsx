@@ -35,29 +35,38 @@ export default function About() {
           >
             <div>
               <h4 className="text-4xl font-bold font-display text-slate-900 mb-6 relative">
-                Our Story
+                About Us
                 <span className="absolute -bottom-2 left-0 w-20 h-1.5 bg-primary-orange rounded-full"></span>
               </h4>
-              <p className="text-xl text-slate-700 leading-relaxed font-medium">
-                Founded in the heart of Rongo Town, Eco-Fibre Network Solutions was born from a simple yet powerful vision: <span className="text-primary-orange">every Kenyan deserves world-class internet.</span>
-              </p>
+              <div className="space-y-6 text-xl text-slate-700 leading-relaxed font-medium">
+                <p>
+                  Eco-Fibre Network Solution is a leading ICT infrastructure and fibre optic internet service provider headquartered in Awendo, with offices in Rongo and Nairobi. Established to bridge the digital divide in underserved communities, we specialize in fibre optic installations, network maintenance, internet service delivery, and digital customer support.
+                </p>
+                <p>
+                  Our presence in Migori County, coupled with our expanding regional footprint, positions us as a trusted partner for residential estates, businesses, and institutions seeking reliable connectivity.
+                </p>
+                <p>
+                  Our solutions are designed with a strong focus on network reliability, uptime guarantees, redundancy, and preventive maintenance, ensuring clients enjoy uninterrupted digital services.
+                </p>
+              </div>
             </div>
             
-            <div className="space-y-6">
-              {[
-                { icon: MapPin, title: "Local Roots", text: "Started as a small local initiative in Rongo and grew into a leading force for digital transformation in Migori and Kisii." },
-                { icon: Users, title: "Community First", text: "We prioritize local talent and invest in infrastructure that powers thousands of homes, schools, and businesses." }
-              ].map((item, idx) => (
-                <div key={idx} className="flex gap-5 group hover:translate-x-2 transition-transform duration-300">
-                  <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-primary-orange group-hover:bg-primary-orange group-hover:text-white transition-colors duration-300 shadow-sm">
-                    <item.icon size={26} />
+            <div className="pt-8">
+              <h4 className="text-3xl font-bold font-display text-slate-900 mb-8 flex items-center gap-3">
+                <span className="w-10 h-1 bg-primary-orange rounded-full"></span>
+                Core Values
+              </h4>
+              <div className="grid grid-cols-2 gap-6">
+                {[
+                  "Integrity", "Excellence", "Collaboration",
+                  "Innovation", "Sustainability", "Customer-Centricity"
+                ].map((value, idx) => (
+                  <div key={idx} className="flex items-center gap-3 group">
+                    <div className="w-2 h-2 rounded-full bg-primary-orange group-hover:scale-150 transition-transform"></div>
+                    <span className="text-lg font-bold text-slate-700 group-hover:text-primary-orange transition-colors">{value}</span>
                   </div>
-                  <div className="flex-1">
-                    <h5 className="font-bold text-slate-900 text-lg">{item.title}</h5>
-                    <p className="text-slate-600 leading-relaxed">{item.text}</p>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </motion.div>
           <motion.div 
@@ -177,6 +186,27 @@ export default function About() {
 
         {/* Meet Our Team Section */}
         <Team />
+
+        <div className="bg-slate-50 rounded-[48px] p-12 md:p-20 mb-20 border border-slate-100 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/5 rounded-full blur-3xl"></div>
+          <div className="flex flex-col md:flex-row gap-12 items-center">
+            <div className="flex-1 space-y-6">
+              <h4 className="text-3xl font-bold font-display text-slate-900 flex items-center gap-3">
+                <span className="w-10 h-1 bg-green-500 rounded-full"></span>
+                Our Commitment
+              </h4>
+              <p className="text-xl text-slate-700 leading-relaxed font-medium italic">
+                "Our product is environmentally friendly, does not decompose and can be <span className="text-green-600">100% recycled</span>."
+              </p>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                Sustainability is at the core of our operations. We choose materials and processes that protect the beautiful environment of South Nyanza while providing world-class digital infrastructure.
+              </p>
+            </div>
+            <div className="w-full md:w-1/3 aspect-square rounded-[32px] bg-green-50 flex items-center justify-center text-green-600">
+              <Heart size={80} className="opacity-20" />
+            </div>
+          </div>
+        </div>
 
         <div className="bg-slate-900 rounded-[32px] p-12 text-white text-center relative overflow-hidden">
 
