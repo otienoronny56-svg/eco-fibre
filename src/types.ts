@@ -52,4 +52,12 @@ export interface TeamMember {
   bio: string;
 }
 
-
+export interface CommunityPoster {
+  id: number;
+  title: string;
+  subtitle?: string;
+  message: string;
+  backgroundImage: string;
+  category: 'Holiday' | 'Event' | 'Announcement';
+  date: string;
+}

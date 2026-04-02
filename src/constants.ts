@@ -1,4 +1,4 @@
-import { WiFiPackage, CoverageArea, FAQItem, BlogPost, CareerOpportunity, Testimonial, TeamMember } from './types';
+import { WiFiPackage, CoverageArea, FAQItem, BlogPost, CareerOpportunity, Testimonial, TeamMember, CommunityPoster } from './types';
 
 export const HOME_PACKAGES: WiFiPackage[] = [
   { speed: '8 Mbps', price: '2,000', type: 'home', features: ['Unlimited Data', '24/7 Support', 'Best for 2-3 Devices'] },
@@ -148,7 +148,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Samuel Onyango',
     role: 'Cyber Cafe Owner, Rongo',
     quote: "Eco-Fibre has transformed my cyber cafe. Speed ne en maber ahinya, ok odwacha piny kendo customer gi sani gin mamor.",
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200',
+    image: '/testimonials/testimonial_samuel.png',
     stars: 5
   },
   {
@@ -156,7 +156,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Grace Mutua',
     role: 'Software Developer, Kisii',
     quote: 'As a dev, stability ni kila kitu. Eco-Fibre ndio kusema huku. Hakuna buffer, hakuna stress, kazi inaendelea vako.',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200',
+    image: '/testimonials/testimonial_grace.png',
     stars: 5
   },
   {
@@ -164,7 +164,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Otieno Jakai',
     role: 'Boda Boda Operator, Awendo',
     quote: "Internet gi Eco-Fibre en mapecho kabisa. Agwedho gima amanyogo chiemb pacho gi simu yangu hapa kwa base.",
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=200',
+    image: '/testimonials/testimonial_otieno.png',
     stars: 5
   },
   {
@@ -172,7 +172,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Mama Boaz',
     role: 'Shopkeeper, Migori',
     quote: 'Hii net iko fya! Watoto wanasoma online bila shida yoyote. Shukran sana Eco-Fibre kwa kutuletea fiber home.',
-    image: 'https://images.unsplash.com/photo-1531123897727-8f129e16fd3c?auto=format&fit=crop&q=80&w=200',
+    image: '/testimonials/testimonial_mama_boaz.png',
     stars: 5
   },
   {
@@ -180,7 +180,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Kevin "Kevoo"',
     role: 'Gamer & Content Creator',
     quote: 'Yoh, ping iko chini mbaya! Game haidedi kwanja nikistream Twitch. Eco-Fibre ni mabeast wa connectivity.',
-    image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200',
+    image: '/testimonials/testimonial_kevin.png',
     stars: 5
   },
   {
@@ -188,7 +188,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Achieng\' Nyar Kanyamkago',
     role: 'University Student',
     quote: 'Online classes sasa ni mteremko. Odwacha piny en wach ma ne wasetimo lweny go, sani Eco-Fibre osewero koro.',
-    image: 'https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?auto=format&fit=crop&q=80&w=200',
+    image: '/testimonials/testimonial_achieng.png',
     stars: 5
   }
 ];
@@ -223,6 +223,104 @@ export const TEAM_MEMBERS: TeamMember[] = [
     bio: "Passionate about providing world-class support and ensuring every customer stays connected."
   }
 ];
-
-
-
+export const COMMUNITY_POSTERS: CommunityPoster[] = [
+  {
+    id: 1,
+    category: 'Holiday',
+    title: 'Happy Mashujaa Day',
+    subtitle: 'Celebrating Our Heroes',
+    message: 'To the heroes who built our nation and those who continue to inspire us today. Your bravery and dedication are the backbone of our community.',
+    backgroundImage: '/community/bg_mashujaa.png',
+    date: '20th October'
+  },
+  {
+    id: 2,
+    category: 'Event',
+    title: 'Customer Service Week',
+    subtitle: 'You Are Our Priority',
+    message: 'Thank you for choosing Eco-Fibre. We cherish you as our valued customers. Our commitment to serving you is unwavering, today and always.',
+    backgroundImage: '/community/bg_customer_week.png',
+    date: '1st Week of October'
+  },
+  {
+    id: 3,
+    category: 'Holiday',
+    title: 'Happy Diwali',
+    subtitle: 'Festival of Lights',
+    message: 'Wishing you a Diwali that is as bright and beautiful as you are. May the light of the diyas illuminate your home with peace and prosperity.',
+    backgroundImage: '/community/bg_diwali.png',
+    date: 'October/November'
+  },
+  {
+    id: 4,
+    category: 'Holiday',
+    title: 'Eid Mubarak',
+    subtitle: 'Peace & Prosperity',
+    message: 'May this special day bring peace, happiness, and prosperity to everyone. Wishing you and your family a blessed celebration.',
+    backgroundImage: '/community/bg_eid.png',
+    date: 'Eid Al-Fitr / Eid Al-Adha'
+  },
+  {
+    id: 5,
+    category: 'Holiday',
+    title: 'Happy Easter',
+    subtitle: 'New Beginnings',
+    message: 'Wishing you a joyful Easter filled with hope, renewal, and time with loved ones. Celebrating the spirit of togetherness in our community.',
+    backgroundImage: '/community/bg_easter.png',
+    date: 'March/April'
+  },
+  {
+    id: 6,
+    category: 'Holiday',
+    title: 'Happy Sabbath',
+    subtitle: 'A Day of Peace',
+    message: 'Wishing our Seventh-day Adventist (SDA) community a peaceful and blessed Sabbath. May this day bring rest and spiritual renewal to your homes.',
+    backgroundImage: '/community/bg_sda.png',
+    date: 'Every Saturday'
+  },
+  {
+    id: 7,
+    category: 'Holiday',
+    title: 'Community Blessing',
+    subtitle: 'Faith & Unity',
+    message: 'We celebrate the diversity of faith in our community, including our Legio Maria brothers and sisters. May peace and harmony prevail in every corner of Migori.',
+    backgroundImage: 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80',
+    date: 'Throughout the Year'
+  },
+  {
+    id: 8,
+    category: 'Event',
+    title: 'Piny Luo Festival',
+    subtitle: 'Our Luo Heritage',
+    message: 'Celebrating the rich culture, music, and traditions of the Luo people. Proud to be the network that connects our heritage to the digital world.',
+    backgroundImage: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80',
+    date: 'Annual Celebration'
+  },
+  {
+    id: 9,
+    category: 'Event',
+    title: 'The Art of Kisii',
+    subtitle: 'Soapstone Heritage',
+    message: 'Honoring the incredible artisans of Tabaka. Your soapstone masterpieces are a gift to the world, and we are proud to support your digital growth.',
+    backgroundImage: 'https://images.unsplash.com/photo-1596708143213-92f72ff2620a?auto=format&fit=crop&q=80',
+    date: 'Daily Artistry'
+  },
+  {
+    id: 10,
+    category: 'Event',
+    title: 'Empowering Farmers',
+    subtitle: 'ASK Regional Show',
+    message: 'Connectivity is the new backbone of agriculture. We are proud to power the farmers and businesses in our regional agricultural shows.',
+    backgroundImage: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&q=80',
+    date: 'Seasonal Events'
+  },
+  {
+    id: 11,
+    category: 'Event',
+    title: 'To Our Graduates',
+    subtitle: 'Future Leaders',
+    message: 'Congratulations to the class of 2025! Your hard work and dedication have paid off. The digital world awaits your brilliance.',
+    backgroundImage: 'https://images.unsplash.com/photo-1523050335102-c32c751a4ed2?auto=format&fit=crop&q=80',
+    date: 'Graduation Season'
+  }
+];

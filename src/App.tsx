@@ -11,6 +11,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Coverage from './pages/Coverage';
 import Blog from './pages/Blog';
+import Community from './pages/Community';
 import Careers from './pages/Careers';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
@@ -47,6 +48,7 @@ const Navbar = () => {
     { name: 'Services', path: '/services' },
     { name: 'Coverage', path: '/coverage' },
     { name: 'Blog', path: '/blog' },
+    { name: 'Community', path: '/community' },
     { name: 'Careers', path: '/careers' },
   ];
 
@@ -303,6 +305,7 @@ export default function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/coverage" element={<Coverage />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/community" element={<Community />} />
             <Route path="/blog/:id" element={<BlogPostDetail />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />

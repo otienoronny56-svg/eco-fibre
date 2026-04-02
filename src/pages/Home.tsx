@@ -356,6 +356,66 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Community Corner Teaser */}
+      <section className="py-24 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="aspect-square rounded-[48px] overflow-hidden shadow-2xl border-[12px] border-slate-50 relative group bg-slate-900">
+                <img 
+                  src="/community/bg_mashujaa.png" 
+                  alt="Community Celebration" 
+                  className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+                <div className="absolute inset-0 p-10 flex flex-col justify-between">
+                  <div className="bg-white/90 backdrop-blur-md p-3 rounded-2xl w-fit shadow-lg">
+                    <img src="/logo.png" alt="Eco-Fibre" className="h-8 w-auto object-contain" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-black text-4xl mb-4 leading-tight">Happy <br /> Mashujaa Day</h4>
+                    <p className="text-primary-orange font-bold text-lg uppercase tracking-wider">Celebrating Our Heroes</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Floating Badge */}
+              <motion.div 
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary-orange rounded-full flex items-center justify-center text-white text-center p-4 shadow-2xl border-8 border-white font-bold text-sm uppercase tracking-widest rotate-12"
+              >
+                Local & Proud
+              </motion.div>
+            </motion.div>
+
+            <div className="space-y-8">
+              <h2 className="text-primary-orange font-bold uppercase tracking-[0.2em] text-sm mb-3">Eco-Fibre Community</h2>
+              <h3 className="text-4xl md:text-5xl font-black font-display text-slate-900 leading-tight">
+                More Than Just a <br /> <span className="text-primary-orange">Network.</span>
+              </h3>
+              <p className="text-xl text-slate-600 leading-relaxed">
+                At Eco-Fibre, we celebrate the diverse cultures and traditions that make Kenya vibrant. From national holidays to religious festivals, we are honored to be part of your celebrations and your daily life.
+              </p>
+              <div className="pt-4">
+                <Link 
+                  to="/community"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-slate-900 text-white rounded-2xl font-bold text-lg hover:bg-slate-800 transition-all group shadow-xl"
+                >
+                  Visit Community Corner
+                  <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <Testimonials />
 
