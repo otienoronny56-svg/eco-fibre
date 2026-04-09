@@ -256,8 +256,8 @@ const Footer = () => {
         <p>&copy; 2026 Eco-Fibre Network Solutions. All rights reserved.</p>
         <p>Developed by <a href="https://wa.me/254745806488" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-primary-orange transition-colors">Systems by Ronny</a></p>
       </div>
-    </div>
-  </footer>
+    </footer>
+  );
 };
 
 // --- Main App ---
