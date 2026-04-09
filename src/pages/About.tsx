@@ -1,24 +1,10 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { MapPin, Users, Info, Heart, Play, Pause } from 'lucide-react';
+import { MapPin, Users, Info, Heart } from 'lucide-react';
 import Team from '../components/Team';
 
 
 export default function About() {
-  const [isPlaying, setIsPlaying] = React.useState(false);
-  const videoRef = React.useRef<HTMLVideoElement>(null);
-
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
   return (
     <div className="pt-24 pb-20">
       <section className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -233,55 +219,36 @@ export default function About() {
         </div>
 
         {/* Meet the Team in Action - Video Showcase */}
-        <section className="mt-24 mb-10">
+        <section className="mt-24 mb-10 overflow-hidden">
           <div className="text-center mb-12">
             <h2 className="text-primary-orange font-bold uppercase tracking-[0.2em] text-sm mb-3">Eco-Fibre in Action</h2>
             <h3 className="text-4xl font-bold font-display text-slate-900">Meet the Hands Building Your Network</h3>
           </div>
 
-          <div className="max-w-5xl mx-auto relative group">
-            <div className="relative rounded-[40px] overflow-hidden shadow-2xl border-[8px] border-white aspect-video bg-slate-900">
-              <video 
-                ref={videoRef}
-                className="w-full h-full object-cover"
-                poster="/african_fiber_technician_ecofibre_branded_1774960180777.png"
-                onPlay={() => setIsPlaying(true)}
-                onPause={() => setIsPlaying(false)}
-              >
-                <source src="/eco-fibre-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              
-              {/* Overlay Controls */}
-              <div 
-                className={`absolute inset-0 flex items-center justify-center transition-all duration-500 bg-slate-950/20 group-hover:bg-slate-950/40 ${isPlaying ? 'opacity-0 hover:opacity-100' : 'opacity-100'}`}
-              >
-                <button 
-                  onClick={togglePlay}
-                  className="w-24 h-24 rounded-full bg-white text-primary-orange flex items-center justify-center shadow-2xl hover:scale-110 transition-transform active:scale-95 group/btn"
-                >
-                  {isPlaying ? (
-                    <Pause size={40} className="fill-primary-orange" />
-                  ) : (
-                    <Play size={40} className="fill-primary-orange ml-2" />
-                  )}
-                </button>
-              </div>
-
-              {/* Video Info Badge */}
-              {!isPlaying && (
-                <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end pointer-events-none">
-                  <div className="bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-xl border border-white/20">
-                    <p className="text-slate-900 font-bold text-lg mb-1">Expert Installation</p>
-                    <p className="text-slate-600 text-sm">Watch our technicians at work</p>
-                  </div>
-                </div>
-              )}
+          <div className="max-w-lg mx-auto relative group">
+            {/* Portrait Video Container */}
+            <div className="relative rounded-[40px] overflow-hidden shadow-2xl border-[8px] border-white aspect-[9/16] bg-slate-900">
+              <iframe 
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/9mGV7sB86gQ?autoplay=0&rel=0&modestbranding=1"
+                title="Eco-Fibre Team in Action"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
             </div>
             
             {/* Decorative Elements */}
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary-orange/10 rounded-full blur-3xl -z-10"></div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary-blue/10 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary-orange/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
+            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-primary-blue/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
+            
+            {/* Technical Detail Label */}
+            <div className="mt-8 text-center">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 rounded-full text-slate-600 text-sm font-bold">
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-ping"></span>
+                Standard Installation in Progress
+              </div>
+            </div>
           </div>
         </section>
       </section>
