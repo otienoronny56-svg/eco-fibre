@@ -128,6 +128,23 @@ export default function Packages() {
             </a>
           </div>
         )}
+
+        {/* Speed & Performance Disclaimer */}
+        <div className="mt-16 max-w-4xl mx-auto">
+          <div className="bg-slate-50 border border-slate-200 rounded-[32px] p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 shadow-sm">
+            <div className="w-16 h-16 rounded-2xl bg-primary-orange/10 flex items-center justify-center text-primary-orange flex-shrink-0 animate-pulse">
+              <Zap size={32} />
+            </div>
+            <div>
+              <h4 className="text-xl font-bold text-slate-900 mb-2">💡 Pro-Tip for Best Speed</h4>
+              <p className="text-slate-600 leading-relaxed">
+                Our recommended device counts are designed to give you the <span className="text-primary-orange font-bold font-display italic">smoothest experience</span>. If you connect more devices than suggested, you might notice lag or buffering, especially during video calls, gaming, or streaming. 
+                <br /><br />
+                <span className="font-bold text-slate-800">Always choose a package that matches your total number of users for guaranteed 100% satisfaction!</span>
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );

@@ -60,6 +60,10 @@ export const FAQS: FAQItem[] = [
     answer: 'Relocation requests should be made at least 48 hours in advance. Contact our support team to check coverage at your new location.'
   },
   {
+    question: 'Why is my internet slow or lagging?',
+    answer: 'Lag usually occurs when the number of connected devices exceeds the recommended limit for your package, or when multiple devices are performing heavy tasks like HD streaming or large system updates simultaneously. Restarting your router and ensuring you are within the recommended device count often fixes this.'
+  },
+  {
     question: 'What should I do if my internet is slow?',
     answer: 'First, restart your router. If the issue persists, check if multiple devices are performing heavy downloads. For further assistance, contact our support line at +254710172828 or 0106182828.'
   },
