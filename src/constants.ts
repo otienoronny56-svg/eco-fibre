@@ -5,13 +5,19 @@ export const HOME_PACKAGES: WiFiPackage[] = [
   { speed: '4 Mbps', price: '1,500', type: 'home', features: ['Unlimited Data', '24/7 Support', '3-6 Devices'] },
   { speed: '8 Mbps', price: '2,000', type: 'home', features: ['Unlimited Data', '24/7 Support', '6-10 Devices'] },
   { speed: '12 Mbps', price: '2,500', type: 'home', features: ['Unlimited Data', '24/7 Support', '10-15 Devices', 'Multiple HD Streams'] },
-  { speed: '16 Mbps', price: '3,000', type: 'home', features: ['Unlimited Data', '24/7 Support', '15-20 Devices'] },
-  { speed: '20 Mbps', price: '4,000', type: 'home', features: ['Unlimited Data', '24/7 Support', '20-25 Devices'] },
-  { speed: '25 Mbps', price: '5,000', type: 'home', features: ['Unlimited Data', '24/7 Support', '25+ Devices'] },
-  { speed: '30 Mbps', price: '6,000', type: 'home', features: ['Unlimited Data', '24/7 Support', '30+ Devices'] }
+  { speed: '16 Mbps', price: '3,000', type: 'home', features: ['Unlimited Data', '24/7 Support', 'Seamless 4K Streaming', 'Pro Gaming Setup'] },
+  { speed: '20 Mbps', price: '4,000', type: 'home', features: ['Unlimited Data', '24/7 Support', 'Ultra HD Experience', 'Smart Home Optimized'] },
+  { speed: '25 Mbps', price: '5,000', type: 'home', features: ['Unlimited Data', '24/7 Support', 'Heavy Activity', 'Seamless Remote Work'] },
+  { speed: '30 Mbps', price: '6,000', type: 'home', features: ['Unlimited Data', '24/7 Support', 'Ultimate Entertainment', 'Zero Lag Experience'] }
 ];
 
 export const BUSINESS_PACKAGES: WiFiPackage[] = [
+  { speed: '8 Mbps', price: '2,000', type: 'business', features: ['Dedicated Support', '99.9% Uptime', 'Small Shop / Kiosk', 'Seamless POS'] },
+  { speed: '12 Mbps', price: '2,500', type: 'business', features: ['Dedicated Support', '99.9% Uptime', 'Smooth Conferencing', 'Growing Business'] },
+  { speed: '16 Mbps', price: '3,000', type: 'business', features: ['Dedicated Support', 'Static IP Available', 'Growing SME', 'Fast Cloud Backups'] },
+  { speed: '20 Mbps', price: '4,000', type: 'business', features: ['Dedicated Support', 'Static IP Available', 'Multiple POS Systems', 'Remote Collaboration'] },
+  { speed: '25 Mbps', price: '5,000', type: 'business', features: ['Priority Support', 'Static IP Available', 'Medium Enterprise', 'Heavy Database Usage'] },
+  { speed: '30 Mbps', price: '6,000', type: 'business', features: ['Priority Support', 'Static IP Included', 'High Demand Office', 'Large Team Support'] },
   { speed: '100+ Mbps', price: '200/Mbps', type: 'business', features: ['Custom Solutions', 'Fiber to the Office', 'Dedicated Account Manager', 'Enterprise Grade'] }
 ];
 
