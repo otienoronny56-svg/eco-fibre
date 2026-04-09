@@ -1,18 +1,18 @@
 import { WiFiPackage, CoverageArea, FAQItem, BlogPost, CareerOpportunity, Testimonial, TeamMember, CommunityPoster } from './types';
 
 export const HOME_PACKAGES: WiFiPackage[] = [
-  { speed: '8 Mbps', price: '2,000', type: 'home', features: ['Unlimited Data', '24/7 Support', 'Best for 2-3 Devices'] },
-  { speed: '10 Mbps', price: '2,400', type: 'home', features: ['Unlimited Data', '24/7 Support', 'Best for 4-5 Devices'] },
-  { speed: '12 Mbps', price: '2,800', type: 'home', features: ['Unlimited Data', '24/7 Support', 'HD Streaming'] },
-  { speed: '15 Mbps', price: '3,500', type: 'home', features: ['Unlimited Data', '24/7 Support', 'Multiple HD Streams'] },
-  { speed: '20 Mbps', price: '4,500', type: 'home', features: ['Unlimited Data', '24/7 Support', 'Ultra HD & Gaming'] },
+  { speed: '2 Mbps', price: '1,000', type: 'home', features: ['Unlimited Data', '24/7 Support', '2-3 Devices (Coming Soon)'] },
+  { speed: '4 Mbps', price: '1,500', type: 'home', features: ['Unlimited Data', '24/7 Support', '3-6 Devices'] },
+  { speed: '8 Mbps', price: '2,000', type: 'home', features: ['Unlimited Data', '24/7 Support', '6-10 Devices'] },
+  { speed: '12 Mbps', price: '2,500', type: 'home', features: ['Unlimited Data', '24/7 Support', '10-15 Devices', 'Multiple HD Streams'] },
+  { speed: '16 Mbps', price: '3,000', type: 'home', features: ['Unlimited Data', '24/7 Support', '15-20 Devices'] },
+  { speed: '20 Mbps', price: '4,000', type: 'home', features: ['Unlimited Data', '24/7 Support', '20-25 Devices'] },
+  { speed: '25 Mbps', price: '5,000', type: 'home', features: ['Unlimited Data', '24/7 Support', '25+ Devices'] },
+  { speed: '30 Mbps', price: '6,000', type: 'home', features: ['Unlimited Data', '24/7 Support', '30+ Devices'] }
 ];
 
 export const BUSINESS_PACKAGES: WiFiPackage[] = [
-  { speed: '7 Mbps', price: '2,500', type: 'business', features: ['Dedicated Support', 'Static IP Available', '99.9% Uptime', 'SME Focused'] },
-  { speed: '15 Mbps', price: '5,000', type: 'business', features: ['Dedicated Support', 'Static IP Available', '99.9% Uptime', 'Medium Business'] },
-  { speed: '20 Mbps', price: '7,000', type: 'business', features: ['Dedicated Support', 'Static IP Available', '99.9% Uptime', 'High Demand'] },
-  { speed: '100+ Mbps', price: '220/Mbps', type: 'business', features: ['Custom Solutions', 'Fiber to the Office', 'Dedicated Account Manager', 'Enterprise Grade'] },
+  { speed: '100+ Mbps', price: '200/Mbps', type: 'business', features: ['Custom Solutions', 'Fiber to the Office', 'Dedicated Account Manager', 'Enterprise Grade'] }
 ];
 
 export const COVERAGE_AREAS: CoverageArea[] = [
@@ -39,11 +39,11 @@ export const COVERAGE_AREAS: CoverageArea[] = [
 export const FAQS: FAQItem[] = [
   {
     question: 'How do I make payments?',
-    answer: 'Payments can be made via M-Pesa to our official line: +254710172828. You can also contact us via WhatsApp for a direct payment link or account details.'
+    answer: 'Payments can be made via M-Pesa to our official line: +254710172828 or 0106182828. You can also contact us via WhatsApp for a direct payment link or account details.'
   },
   {
     question: 'What if my payment is not reflecting?',
-    answer: 'If your payment doesn\'t reflect within 10 minutes, please contact our support line at +254710172828 with your M-Pesa transaction code.'
+    answer: 'If your payment doesn\'t reflect within 10 minutes, please contact our support line at +254710172828 or 0106182828 with your M-Pesa transaction code.'
   },
   {
     question: 'How do I request a new connection?',
@@ -55,7 +55,7 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: 'What should I do if my internet is slow?',
-    answer: 'First, restart your router. If the issue persists, check if multiple devices are performing heavy downloads. For further assistance, contact our support line at +254710172828.'
+    answer: 'First, restart your router. If the issue persists, check if multiple devices are performing heavy downloads. For further assistance, contact our support line at +254710172828 or 0106182828.'
   },
   {
     question: 'Can I upgrade or downgrade my package?',
@@ -63,7 +63,7 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: 'Do you offer custom business plans?',
-    answer: 'Absolutely. For requirements above 100 Mbps, we offer customized enterprise solutions at 220 Ksh per Mbps.'
+    answer: 'Absolutely. For requirements above 100 Mbps, we offer customized enterprise solutions at 200 Ksh per Mbps.'
   }
 ];
 

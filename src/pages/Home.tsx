@@ -292,7 +292,7 @@ export default function Home() {
                 { 
                   step: '01', 
                   title: 'Contact Us', 
-                  desc: 'Reach out via WhatsApp or call +254710172828 to start your journey.',
+                  desc: 'Reach out via WhatsApp or call +254710172828 or 0106182828 to start your journey.',
                   icon: <MessageSquare size={28} />
                 },
                 { 
