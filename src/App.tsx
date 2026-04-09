@@ -258,7 +258,7 @@ const Footer = () => {
       </div>
     </div>
   </footer>
-);
+};
 
 // --- Main App ---
 export default function App() {
