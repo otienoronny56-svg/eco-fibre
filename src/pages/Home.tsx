@@ -98,7 +98,7 @@ export default function Home() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-6 items-center">
-                <Link to="/services" className="w-full sm:w-auto btn-primary orange-gradient text-white flex items-center justify-center shadow-2xl shadow-orange-500/40 text-xl font-bold py-5 px-12 rounded-[24px] hover:scale-105 transition-all">
+                <Link to="/packages" className="w-full sm:w-auto btn-primary orange-gradient text-white flex items-center justify-center shadow-2xl shadow-orange-500/40 text-xl font-bold py-5 px-12 rounded-[24px] hover:scale-105 transition-all">
                   Explore Packages <ArrowRight className="ml-3" size={24} />
                 </Link>
                 <Link to="/coverage" className="w-full sm:w-auto text-white font-black text-lg py-5 px-8 flex items-center hover:bg-white/10 rounded-[20px] transition-colors group">
@@ -347,7 +347,7 @@ export default function Home() {
 
           <div className="mt-20 text-center">
             <Link 
-              to="/services"
+              to="/packages"
               className="inline-flex items-center gap-3 px-10 py-4 orange-gradient text-white rounded-2xl font-black text-lg shadow-2xl shadow-orange-500/40 hover:scale-105 transition-all"
             >
               Get Started Now <ArrowRight size={20} />

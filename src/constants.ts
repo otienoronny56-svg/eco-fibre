@@ -1,7 +1,7 @@
 import { WiFiPackage, CoverageArea, FAQItem, BlogPost, CareerOpportunity, Testimonial, TeamMember, CommunityPoster } from './types';
 
 export const HOME_PACKAGES: WiFiPackage[] = [
-  { speed: '2 Mbps', price: '1,000', type: 'home', features: ['Unlimited Data', '24/7 Support', '2-3 Devices (Coming Soon)'] },
+  { speed: '2 Mbps', price: '1,000', type: 'home', badge: 'Coming Soon', features: ['Unlimited Data', '24/7 Support', '2-3 Devices'] },
   { speed: '4 Mbps', price: '1,500', type: 'home', features: ['Unlimited Data', '24/7 Support', '3-6 Devices'] },
   { speed: '8 Mbps', price: '2,000', type: 'home', features: ['Unlimited Data', '24/7 Support', '6-10 Devices'] },
   { speed: '12 Mbps', price: '2,500', type: 'home', features: ['Unlimited Data', '24/7 Support', '10-15 Devices', 'Multiple HD Streams'] },

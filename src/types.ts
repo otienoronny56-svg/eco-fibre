@@ -3,6 +3,7 @@ export interface WiFiPackage {
   price: string;
   type: 'home' | 'business';
   features: string[];
+  badge?: string;
 }
 
 export interface CoverageArea {

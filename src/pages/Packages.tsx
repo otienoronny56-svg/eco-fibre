@@ -4,7 +4,7 @@ import { Check, Star, Zap, Building2, Home as HomeIcon } from 'lucide-react';
 import { HOME_PACKAGES, BUSINESS_PACKAGES } from '../constants';
 import { cn } from '../lib/utils';
 
-export default function Services() {
+export default function Packages() {
   const [tab, setTab] = useState<'home' | 'business'>('home');
 
   return (
@@ -51,7 +51,18 @@ export default function Services() {
                 idx === 2 && tab === 'home' && "ring-2 ring-primary-orange shadow-orange-500/10"
               )}
             >
-              {idx === 2 && tab === 'home' && (
+              {pkg.badge && (
+                <div 
+                  className={cn(
+                    "absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-6 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-xl",
+                    pkg.badge === 'Coming Soon' ? "bg-slate-800 text-white" : "orange-gradient text-white"
+                  )}
+                >
+                  {pkg.badge}
+                </div>
+              )}
+              
+              {idx === 2 && tab === 'home' && !pkg.badge && (
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 orange-gradient text-white px-6 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-xl">
                   Best Value
                 </div>

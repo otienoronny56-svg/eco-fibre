@@ -8,7 +8,7 @@ import { cn } from './lib/utils';
 // Pages
 import Home from './pages/Home';
 import About from './pages/About';
-import Services from './pages/Services';
+import Packages from './pages/Packages';
 import Coverage from './pages/Coverage';
 import Blog from './pages/Blog';
 import Community from './pages/Community';
@@ -45,7 +45,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
+    { name: 'Packages', path: '/packages' },
     { name: 'Coverage', path: '/coverage' },
     { name: 'Blog', path: '/blog' },
     { name: 'Community', path: '/community' },
@@ -86,7 +86,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Link 
-            to="/services"
+            to="/packages"
             className="btn-primary orange-gradient text-white shadow-lg shadow-orange-500/20 py-2 px-6 text-sm"
           >
             Get Started
@@ -125,7 +125,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <Link 
-                to="/services"
+                to="/packages"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block text-center mt-6 btn-primary orange-gradient text-white"
               >
@@ -179,7 +179,7 @@ const Footer = () => (
           <ul className="space-y-4 text-slate-400 text-base">
             <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
             <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
-            <li><Link to="/services" className="hover:text-white transition-colors">Service Packages</Link></li>
+            <li><Link to="/packages" className="hover:text-white transition-colors">Service Packages</Link></li>
             <li><Link to="/coverage" className="hover:text-white transition-colors">Coverage Areas</Link></li>
             <li><Link to="/blog" className="hover:text-white transition-colors">Latest News</Link></li>
             <li><a href="/#faq" className="hover:text-white transition-colors">Frequently Asked Questions</a></li>
@@ -302,7 +302,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
+            <Route path="/packages" element={<Packages />} />
             <Route path="/coverage" element={<Coverage />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/community" element={<Community />} />
