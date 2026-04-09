@@ -116,7 +116,7 @@ export default function Packages() {
                 <Star size={14} className="mr-2 fill-white" /> Enterprise Solutions
               </div>
               <h4 className="text-4xl font-bold font-display mb-4">Custom Dedicated Fiber</h4>
-              <p className="text-xl text-blue-100 leading-relaxed">For large corporations, schools, and hospitals requiring 100+ Mbps. We offer dedicated bandwidth at 220 Ksh per Mbps.</p>
+              <p className="text-xl text-blue-100 leading-relaxed">For large corporations, schools, and hospitals requiring 100+ Mbps. We offer dedicated bandwidth at 200 Ksh per Mbps.</p>
             </div>
             <a 
               href={`https://wa.me/254710172828?text=${encodeURIComponent('Hello Eco-Fibre! I am interested in your Custom Dedicated Fiber solutions for my organization/office.')}`}
