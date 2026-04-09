@@ -1,9 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Briefcase, MapPin, Clock, ArrowRight, Send, FileText } from 'lucide-react';
 import { CAREERS } from '../constants';
 
 export default function Careers() {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    position: '',
+    resume: '',
+    message: ''
+  });
+
+  const handleApply = (e: React.FormEvent) => {
+    e.preventDefault();
+    const { fullName, email, position, resume, message } = formData;
+    
+    const text = `*New Job Application - Eco-Fibre*%0A%0A` +
+                 `*Name:* ${fullName}%0A` +
+                 `*Email:* ${email}%0A` +
+                 `*Position:* ${position}%0A` +
+                 `*Resume:* ${resume}%0A` +
+                 `*Message:* ${message}`;
+                 
+    window.open(`https://wa.me/254710172828?text=${text}`, '_blank');
+  };
+
   return (
     <div className="pt-24 pb-20 bg-white min-h-screen">
       <section className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -51,22 +73,39 @@ export default function Careers() {
                 <h4 className="text-3xl font-bold font-display">Quick Apply</h4>
               </div>
               
-              <form className="space-y-6">
+              <form onSubmit={handleApply} className="space-y-6">
                 <div className="space-y-4">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
                       <label className="text-xs font-bold uppercase tracking-widest text-blue-200">Full Name</label>
-                      <input type="text" className="w-full px-6 py-3.5 rounded-2xl bg-white/10 border-2 border-white/20 focus:border-white outline-none text-lg transition-all" />
+                      <input 
+                        type="text" 
+                        required
+                        value={formData.fullName}
+                        onChange={(e) => setFormData({...formData, fullName: e.target.value})}
+                        className="w-full px-6 py-3.5 rounded-2xl bg-white/10 border-2 border-white/20 focus:border-white outline-none text-lg transition-all" 
+                      />
                     </div>
                     <div className="space-y-1.5">
                       <label className="text-xs font-bold uppercase tracking-widest text-blue-200">Email</label>
-                      <input type="email" className="w-full px-6 py-3.5 rounded-2xl bg-white/10 border-2 border-white/20 focus:border-white outline-none text-lg transition-all" />
+                      <input 
+                        type="email" 
+                        required
+                        value={formData.email}
+                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                        className="w-full px-6 py-3.5 rounded-2xl bg-white/10 border-2 border-white/20 focus:border-white outline-none text-lg transition-all" 
+                      />
                     </div>
                   </div>
                   
                   <div className="space-y-1.5">
                     <label className="text-xs font-bold uppercase tracking-widest text-blue-200">Position</label>
-                    <select className="w-full px-6 py-3.5 rounded-2xl bg-white/10 border-2 border-white/20 focus:border-white outline-none text-lg transition-all appearance-none">
+                    <select 
+                      required
+                      value={formData.position}
+                      onChange={(e) => setFormData({...formData, position: e.target.value})}
+                      className="w-full px-6 py-3.5 rounded-2xl bg-white/10 border-2 border-white/20 focus:border-white outline-none text-lg transition-all appearance-none"
+                    >
                       <option value="" className="bg-primary-blue">Select a role</option>
                       {CAREERS.map(j => <option key={j.id} value={j.title} className="bg-primary-blue">{j.title}</option>)}
                     </select>
@@ -74,16 +113,28 @@ export default function Careers() {
 
                   <div className="space-y-1.5">
                     <label className="text-xs font-bold uppercase tracking-widest text-blue-200">Resume Link (Drive/Dropbox)</label>
-                    <input type="url" className="w-full px-6 py-3.5 rounded-2xl bg-white/10 border-2 border-white/20 focus:border-white outline-none text-lg transition-all" />
+                    <input 
+                      type="url" 
+                      required
+                      value={formData.resume}
+                      onChange={(e) => setFormData({...formData, resume: e.target.value})}
+                      className="w-full px-6 py-3.5 rounded-2xl bg-white/10 border-2 border-white/20 focus:border-white outline-none text-lg transition-all" 
+                    />
                   </div>
 
                   <div className="space-y-1.5">
                     <label className="text-xs font-bold uppercase tracking-widest text-blue-200">Message</label>
-                    <textarea rows={3} className="w-full px-6 py-3.5 rounded-2xl bg-white/10 border-2 border-white/20 focus:border-white outline-none text-lg transition-all"></textarea>
+                    <textarea 
+                      rows={3} 
+                      required
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      className="w-full px-6 py-3.5 rounded-2xl bg-white/10 border-2 border-white/20 focus:border-white outline-none text-lg transition-all"
+                    ></textarea>
                   </div>
                 </div>
 
-                <button type="button" className="w-full py-4 bg-white text-primary-blue rounded-2xl font-bold text-xl hover:bg-blue-50 transition-colors shadow-2xl flex items-center justify-center gap-3">
+                <button type="submit" className="w-full py-4 bg-white text-primary-blue rounded-2xl font-bold text-xl hover:bg-blue-50 transition-colors shadow-2xl flex items-center justify-center gap-3">
                   Submit Application <FileText size={24} />
                 </button>
               </form>
