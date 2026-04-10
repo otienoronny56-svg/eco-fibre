@@ -231,6 +231,13 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: "Head of Customer Services",
     image: "/success.png",
     bio: "Passionate about providing world-class support and ensuring every customer stays connected."
+  },
+  {
+    id: 5,
+    name: "Our Technicians",
+    role: "Field Engineering Team",
+    image: "/technicians/d.png",
+    bio: "The dedicated experts on the ground, bringing high-quality fibre connectivity to every corner of South Nyanza."
   }
 ];
 export const COMMUNITY_POSTERS: CommunityPoster[] = [
