@@ -236,7 +236,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: 5,
     name: "Our Technicians",
     role: "Field Engineering Team",
-    image: "/technicians/d.png",
+    image: "/technicians/3.png",
     bio: "The dedicated experts on the ground, bringing high-quality fibre connectivity to every corner of South Nyanza."
   }
 ];
