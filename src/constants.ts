@@ -213,9 +213,9 @@ export const TEAM_MEMBERS: TeamMember[] = [
   },
   {
     id: 2,
-    name: "Sarah Wanjiku",
+    name: "David Omondi",
     role: "Chief Technology Officer",
-    image: "/cto.png",
+    image: "/technicians/c.png",
     bio: "Expert in large-scale fiber infrastructure and network optimization with 10+ years of experience."
   },
   {
