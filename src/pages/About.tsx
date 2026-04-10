@@ -117,72 +117,125 @@ export default function About() {
           </div>
         </section>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-          <div className="relative">
-            <div className="grid grid-cols-2 gap-8 items-start">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-white bg-slate-100"
-              >
-                <img 
-                  src="/technician.png" 
-                  alt="Eco-Fibre Technician" 
-                  className="w-full h-[450px] object-cover"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-white mt-16 bg-slate-100"
-              >
-                <img 
-                  src="/office_team.png" 
-                  alt="Eco-Fibre Team" 
-                  className="w-full h-[450px] object-cover"
-                />
-              </motion.div>
+        {/* Section 1: Engineering the Last Mile (Field Action) */}
+        <section className="mb-24">
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+            <div className="relative">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  { src: 'a.png', delay: 0 },
+                  { src: 'b.png', delay: 0.1 },
+                  { src: 'c.png', delay: 0.2 },
+                  { src: 'd.png', delay: 0.3 },
+                  { src: 'e.png', delay: 0.4 },
+                  { src: 'f.png', delay: 0.5 }
+                ].map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: item.delay }}
+                    className={`rounded-3xl overflow-hidden shadow-lg border-4 border-white aspect-[3/4] ${
+                      idx % 3 === 1 ? 'mt-8' : ''
+                    } ${idx % 3 === 2 ? 'mt-16' : ''}`}
+                  >
+                    <img 
+                      src={`/technicians/${item.src}`} 
+                      alt={`Technician in action ${idx + 1}`} 
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                    />
+                  </motion.div>
+                ))}
+              </div>
+              <div className="absolute -bottom-10 -right-6 z-20 w-40 h-40 bg-primary-blue rounded-full rotate-12 flex items-center justify-center text-white text-center p-6 shadow-2xl border-[8px] border-white cursor-default">
+                <span className="font-bold text-lg leading-tight uppercase tracking-widest text-white">South <br /> Nyanza</span>
+              </div>
             </div>
-            <div className="absolute -bottom-12 -right-6 z-20 w-44 h-44 bg-primary-blue rounded-full rotate-12 flex items-center justify-center text-white text-center p-8 shadow-2xl border-[10px] border-white group hover:scale-110 transition-transform duration-500 cursor-default">
-              <span className="font-bold text-xl leading-tight uppercase tracking-widest">Founded <br /> in Rongo</span>
+
+            <div className="space-y-8">
+              <div className="inline-flex items-center px-4 py-1 rounded-full bg-primary-orange/10 text-primary-orange text-xs font-bold uppercase tracking-widest mb-2">
+                Field Excellence
+              </div>
+              <h3 className="text-4xl font-bold font-display text-slate-900 leading-tight">
+                Engineering the <br /> <span className="text-primary-orange">Last Mile</span>
+              </h3>
+              <p className="text-xl text-slate-700 leading-relaxed font-medium">
+                Our technicians don't just work in offices; they traverse the suburbs and rural landscapes of South Nyanza, climbing poles and laying fibre to ensure no household is left in the dark.
+              </p>
+              
+              <div className="space-y-6 pt-4">
+                <div className="flex gap-6 group">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-primary-blue/10 flex items-center justify-center text-primary-blue shadow-inner group-hover:bg-primary-blue group-hover:text-white transition-all">
+                    <MapPin size={28} />
+                  </div>
+                  <div>
+                    <h4 className="text-2xl font-bold mb-1">Deep Local Reach</h4>
+                    <p className="text-lg text-slate-600 leading-relaxed">From the busy streets of Rongo to the quiet estates of Migori, we are physically there, building the network.</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-6 group">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-primary-orange/10 flex items-center justify-center text-primary-orange shadow-inner group-hover:bg-primary-orange group-hover:text-white transition-all">
+                    <Users size={28} />
+                  </div>
+                  <div>
+                    <h4 className="text-2xl font-bold mb-1">Local Talent in Action</h4>
+                    <p className="text-lg text-slate-600 leading-relaxed">We employ and train local technicians, fostering economic growth and ensuring community-led connectivity.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </section>
 
-          <div className="space-y-8">
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-primary-blue/10 flex items-center justify-center text-primary-blue shadow-inner">
-                <MapPin size={28} />
+        {/* Section 2: Technical Precision (Workshop) */}
+        <section className="mb-24">
+          <div className="bg-slate-900 rounded-[56px] p-12 md:p-20 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-primary-orange/10 rounded-full blur-[120px] -mr-48 -mt-48"></div>
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-blue/10 rounded-full blur-[120px] -ml-48 -mb-48"></div>
+            
+            <div className="relative z-10 text-center mb-16 max-w-3xl mx-auto">
+              <div className="inline-flex items-center px-4 py-1 rounded-full bg-white/10 text-primary-orange text-xs font-bold uppercase tracking-widest mb-4">
+                The Rongo Hub
               </div>
-              <div>
-                <h4 className="text-2xl font-bold mb-2">Our Roots: Rongo Town</h4>
-                <p className="text-lg text-slate-600 leading-relaxed">Our journey began in Rongo Town with a simple vision: to ensure that no Kenyan is left behind in the digital revolution. Today, our main office remains in Rongo, serving as the heart of our operations.</p>
-              </div>
+              <h3 className="text-4xl md:text-5xl font-bold font-display text-white mb-6">Technical Mastery at the Workshop</h3>
+              <p className="text-xl text-slate-400 leading-relaxed">
+                Before any fibre core reaches your home, it is precision-tested and prepared at our central workshop hub. Here, our experts ensure world-class standards for every installation.
+              </p>
             </div>
 
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-primary-orange/10 flex items-center justify-center text-primary-orange shadow-inner">
-                <Heart size={28} />
-              </div>
-              <div>
-                <h4 className="text-2xl font-bold mb-2">Community First</h4>
-                <p className="text-lg text-slate-600 leading-relaxed">We don't just sell internet; we build communities. By connecting schools and churches, we are opening doors to global education and spiritual connection.</p>
-              </div>
-            </div>
-
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 shadow-inner">
-                <Users size={28} />
-              </div>
-              <div>
-                <h4 className="text-2xl font-bold mb-2">Local Talent</h4>
-                <p className="text-lg text-slate-600 leading-relaxed">Eco-Fibre is proud to be a local employer. We hire and train talent from within our coverage areas, fostering economic growth where it matters most.</p>
-              </div>
+            <div className="grid md:grid-cols-3 gap-8 relative z-10">
+              {[
+                { src: '1.png', label: 'Equipment Splicing', desc: 'Precision fibre fusion for zero-loss signals.' },
+                { src: '2.png', label: 'Network Strategy', desc: 'Planning the expansion across Nyanza region.' },
+                { src: '3.png', label: 'Quality Assurance', desc: 'Testing every router before it leaves the hub.' }
+              ].map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  className="group"
+                >
+                  <div className="relative aspect-[4/5] rounded-[32px] overflow-hidden mb-6 border-4 border-white/10 group-hover:border-primary-orange/50 transition-colors bg-slate-800">
+                    <img 
+                      src={`/technicians/${item.src}`} 
+                      alt={item.label} 
+                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
+                    />
+                    <div className="absolute inset-x-4 bottom-4 glass-card p-4 rounded-2xl opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                      <p className="text-white font-bold text-center text-sm">{item.label}</p>
+                    </div>
+                  </div>
+                  <h4 className="text-white text-xl font-bold text-center mb-2">{item.label}</h4>
+                  <p className="text-slate-400 text-center text-base">{item.desc}</p>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Meet Our Team Section */}
         <Team />
