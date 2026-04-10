@@ -117,6 +117,41 @@ export default function About() {
           </div>
         </section>
 
+
+
+        {/* Meet Our Team Section */}
+        <Team />
+
+        <div className="bg-slate-50 rounded-[48px] p-12 md:p-20 mb-20 border border-slate-100 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/5 rounded-full blur-3xl"></div>
+          <div className="flex flex-col md:flex-row gap-12 items-center">
+            <div className="flex-1 space-y-6">
+              <h4 className="text-3xl font-bold font-display text-slate-900 flex items-center gap-3">
+                <span className="w-10 h-1 bg-green-500 rounded-full"></span>
+                Our Commitment
+              </h4>
+              <p className="text-xl text-slate-700 leading-relaxed font-medium italic">
+                "Our product is environmentally friendly, does not decompose and can be <span className="text-green-600">100% recycled</span>."
+              </p>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                Sustainability is at the core of our operations. We choose materials and processes that protect the beautiful environment of South Nyanza while providing world-class digital infrastructure.
+              </p>
+            </div>
+            <div className="w-full md:w-1/3 aspect-square rounded-[32px] bg-green-50 flex items-center justify-center text-green-600">
+              <Heart size={80} className="opacity-20" />
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-slate-900 rounded-[32px] p-12 text-white text-center relative overflow-hidden mb-24">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary-orange/20 rounded-full blur-3xl"></div>
+          <div className="relative z-10 max-w-4xl mx-auto">
+            <h4 className="text-3xl font-bold font-display mb-6">"Connectivity is the bridge to opportunity. We are building that bridge for every Kenyan household."</h4>
+            <div className="w-16 h-1 bg-primary-orange mx-auto mb-4"></div>
+            <p className="text-xl font-bold text-primary-orange">Ronny Winstone Otieno — Founder & CEO, Eco-Fibre Network</p>
+          </div>
+        </div>
+
         {/* Section 1: Engineering the Last Mile (Field Action) */}
         <section className="mb-24">
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
@@ -236,40 +271,6 @@ export default function About() {
             </div>
           </div>
         </section>
-
-        {/* Meet Our Team Section */}
-        <Team />
-
-        <div className="bg-slate-50 rounded-[48px] p-12 md:p-20 mb-20 border border-slate-100 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/5 rounded-full blur-3xl"></div>
-          <div className="flex flex-col md:flex-row gap-12 items-center">
-            <div className="flex-1 space-y-6">
-              <h4 className="text-3xl font-bold font-display text-slate-900 flex items-center gap-3">
-                <span className="w-10 h-1 bg-green-500 rounded-full"></span>
-                Our Commitment
-              </h4>
-              <p className="text-xl text-slate-700 leading-relaxed font-medium italic">
-                "Our product is environmentally friendly, does not decompose and can be <span className="text-green-600">100% recycled</span>."
-              </p>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Sustainability is at the core of our operations. We choose materials and processes that protect the beautiful environment of South Nyanza while providing world-class digital infrastructure.
-              </p>
-            </div>
-            <div className="w-full md:w-1/3 aspect-square rounded-[32px] bg-green-50 flex items-center justify-center text-green-600">
-              <Heart size={80} className="opacity-20" />
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-slate-900 rounded-[32px] p-12 text-white text-center relative overflow-hidden">
-
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary-orange/20 rounded-full blur-3xl"></div>
-          <div className="relative z-10 max-w-4xl mx-auto">
-            <h4 className="text-3xl font-bold font-display mb-6">"Connectivity is the bridge to opportunity. We are building that bridge for every Kenyan household."</h4>
-            <div className="w-16 h-1 bg-primary-orange mx-auto mb-4"></div>
-            <p className="text-xl font-bold text-primary-orange">Ronny Winstone Otieno — Founder & CEO, Eco-Fibre Network</p>
-          </div>
-        </div>
 
         {/* Meet the Team in Action - Video Showcase */}
         <section className="mt-24 mb-10 overflow-hidden">
