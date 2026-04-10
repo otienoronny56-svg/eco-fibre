@@ -242,9 +242,9 @@ export default function About() {
 
             <div className="grid md:grid-cols-3 gap-8 relative z-10">
               {[
-                { src: '1.png', label: 'Equipment Splicing', desc: 'Precision fibre fusion for zero-loss signals.' },
-                { src: '2.png', label: 'Network Strategy', desc: 'Planning the expansion across Nyanza region.' },
-                { src: '3.png', label: 'Quality Assurance', desc: 'Testing every router before it leaves the hub.' }
+                { src: '1.png', label: 'Technical Professionalism', desc: 'Our unified team in official gear, ready for precision field deployment.' },
+                { src: '2.png', label: 'Team Synergy', desc: 'Expert technicians working in coordination to manage our expanding regional network.' },
+                { src: '3.png', label: 'Commitment to Quality', desc: 'A dedicated group of professionals standing by to ensure 99.9% network uptime.' }
               ].map((item, idx) => (
                 <motion.div
                   key={idx}
