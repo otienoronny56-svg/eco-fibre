@@ -11,8 +11,8 @@ export default function Packages() {
     <div className="pt-24 pb-20 bg-neutral-soft min-h-screen">
       <section className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-primary-blue font-bold uppercase tracking-[0.2em] text-sm mb-3">Our Packages</h2>
-          <h3 className="text-4xl font-bold font-display text-slate-900 mb-10">High Speed, Low Cost</h3>
+          <h2 className="text-primary-blue font-bold uppercase tracking-[0.2em] text-sm mb-3">Service Packages</h2>
+          <h3 className="text-4xl font-bold font-display text-slate-900 mb-10">Cheapest Unlimited WiFi in Rongo & Awendo</h3>
           
           <div className="inline-flex p-1.5 bg-white rounded-2xl shadow-xl border border-slate-200">
             <button

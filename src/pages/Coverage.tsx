@@ -18,10 +18,10 @@ export default function Coverage() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-primary-orange font-bold uppercase tracking-[0.2em] text-sm mb-3">Our Network</h2>
-          <h1 className="text-4xl font-bold font-display text-slate-900 mb-4">Expanding Coverage</h1>
+          <h1 className="text-4xl font-bold font-display text-slate-900 mb-4">Fiber Internet Coverage in Rongo & Awendo</h1>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            We are committed to bringing high-speed fiber to every corner of South Nyanza. 
-            Check below to see if your estate is already connected to the Eco-Fibre network.
+            We are the leading provider of high-speed fiber internet in Rongo, Awendo, and Kisii. 
+            Check below to see if your estate is already connected to our ultra-fast network.
           </p>
         </motion.div>
       </section>

@@ -68,17 +68,17 @@ export default function Home() {
             >
               <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 shadow-2xl">
                 <span className="w-2.5 h-2.5 rounded-full bg-green-500 shadow-[0_0_12px_rgba(34,197,94,0.6)] animate-pulse"></span>
-                <span className="text-xs font-black text-white uppercase tracking-[0.2em] leading-none">Powering 10,000+ Kenyan Homes</span>
+                <span className="text-xs font-black text-white uppercase tracking-[0.2em] leading-none">Cheapest Unlimited Internet in Rongo & Awendo</span>
               </div>
               
               <h1 className="text-5xl md:text-7xl font-black font-display leading-[1.1] text-white mb-6 tracking-tight drop-shadow-2xl">
-                Internet That <br />
-                <span className="text-white/90">Moves At Your</span> <br />
-                <span className="text-[#FF3B04] drop-shadow-[0_0_30px_rgba(255,59,4,0.3)]">Speed.</span>
+                The Best <br />
+                <span className="text-white/90">Internet In</span> <br />
+                <span className="text-[#FF3B04] drop-shadow-[0_0_30px_rgba(255,59,4,0.3)]">South Nyanza.</span>
               </h1>
               
               <p className="text-2xl text-slate-200 mb-12 max-w-xl leading-relaxed font-medium drop-shadow-lg">
-                Experience the future of high-speed connectivity in <span className="text-white font-bold underline decoration-primary-orange decoration-4 underline-offset-8">Rongo, Awendo, and Kisii</span> with South Nyanza's leading fiber network.
+                Experience the fastest and <span className="text-white font-bold underline decoration-primary-orange decoration-4 underline-offset-8">cheapest fiber internet</span> in Rongo Town, Awendo, and Kisii. Unlimited data from KSh 1,000/mo.
               </p>
 
               {/* Icon Benefits */}
