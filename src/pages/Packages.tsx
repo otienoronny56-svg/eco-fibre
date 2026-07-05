@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Check, Star, Zap, Building2, Home as HomeIcon } from 'lucide-react';
-import { HOME_PACKAGES, BUSINESS_PACKAGES } from '../constants';
+import { Check, Star, Zap, Building2, Home as HomeIcon, Camera } from 'lucide-react';
+import { HOME_PACKAGES, BUSINESS_PACKAGES, CCTV_PACKAGES } from '../constants';
 import { cn } from '../lib/utils';
 
 export default function Packages() {
-  const [tab, setTab] = useState<'home' | 'business'>('home');
+  const [tab, setTab] = useState<'home' | 'business' | 'cctv'>('home');
 
   return (
     <div className="pt-24 pb-20 bg-neutral-soft min-h-screen">
@@ -33,6 +33,15 @@ export default function Packages() {
             >
               <Building2 size={20} /> Business WiFi
             </button>
+            <button
+              onClick={() => setTab('cctv')}
+              className={cn(
+                "px-8 py-3 rounded-xl font-bold text-lg transition-all flex items-center gap-2",
+                tab === 'cctv' ? "bg-slate-900 text-white shadow-lg" : "text-slate-500 hover:text-slate-700"
+              )}
+            >
+              <Camera size={20} /> CCTV Systems
+            </button>
           </div>
         </div>
 
@@ -43,7 +52,61 @@ export default function Packages() {
           transition={{ duration: 0.5 }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
         >
-          {(tab === 'home' ? HOME_PACKAGES : BUSINESS_PACKAGES).map((pkg, idx) => (
+          {tab === 'cctv' ? CCTV_PACKAGES.map((pkg, idx) => (
+            <div 
+              key={idx} 
+              className={cn(
+                "glass-card rounded-[28px] transition-all duration-500 hover:-translate-y-2 flex flex-col relative group border border-slate-200/50 shadow-lg overflow-hidden",
+                idx === 1 && "ring-2 ring-slate-900 shadow-slate-900/10"
+              )}
+            >
+              <div className="h-48 w-full bg-slate-100 overflow-hidden relative">
+                 <img src={pkg.image} alt={pkg.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                 <div className="absolute bottom-4 left-6">
+                    <h4 className="text-2xl font-bold text-white">{pkg.name}</h4>
+                 </div>
+              </div>
+              
+              <div className="p-6 md:p-8 flex flex-col flex-grow">
+                {pkg.badge && (
+                  <div 
+                    className={cn(
+                      "absolute top-4 right-4 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-xl",
+                      pkg.badge === 'Enterprise' ? "bg-primary-blue text-white" : "orange-gradient text-white"
+                    )}
+                  >
+                    {pkg.badge}
+                  </div>
+                )}
+                
+                <div className="mb-8">
+                  <div className="text-3xl font-bold text-primary-blue">Ksh {pkg.price}</div>
+                  <div className="text-slate-500 text-sm mt-1">Installation & Setup</div>
+                </div>
+                
+                <ul className="space-y-4 mb-10 flex-grow">
+                  {pkg.features.map((feature, fIdx) => (
+                    <li key={fIdx} className="flex items-center text-slate-700 text-base">
+                      <div className="w-6 h-6 rounded-full bg-slate-100 text-slate-900 flex items-center justify-center mr-3 flex-shrink-0 shadow-sm">
+                        <Check size={14} />
+                      </div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <a 
+                  href={`https://wa.me/254710172828?text=${encodeURIComponent(`Hello Eco-Fibre! I am interested in the ${pkg.name} CCTV installation.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full btn-primary bg-slate-900 hover:bg-slate-800 text-white shadow-xl shadow-slate-900/20 py-4 rounded-2xl flex items-center justify-center text-center transition-colors"
+                >
+                  Book Installation
+                </a>
+              </div>
+            </div>
+          )) : (tab === 'home' ? HOME_PACKAGES : BUSINESS_PACKAGES).map((pkg, idx) => (
             <div 
               key={idx} 
               className={cn(

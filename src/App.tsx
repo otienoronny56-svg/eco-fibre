@@ -165,7 +165,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-slate-400 text-base leading-relaxed">
-              The leading provider of reliable, high-speed, and cheapest fiber internet solutions in Rongo Town, Awendo, and Kisii. Connecting South Nyanza to the world.
+              The leading provider of reliable, high-speed fiber internet and professional CCTV installation solutions in Rongo Town, Awendo, and Kisii. Connecting and securing South Nyanza.
             </p>
             <div className="flex space-x-4">
               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (

@@ -62,3 +62,12 @@ export interface CommunityPoster {
   category: 'Holiday' | 'Event' | 'Announcement';
   date: string;
 }
+
+export interface CCTVPackage {
+  id: string;
+  name: string;
+  price: string;
+  features: string[];
+  badge?: string;
+  image?: string;
+}

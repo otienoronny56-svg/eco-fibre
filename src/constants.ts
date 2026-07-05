@@ -1,4 +1,4 @@
-import { WiFiPackage, CoverageArea, FAQItem, BlogPost, CareerOpportunity, Testimonial, TeamMember, CommunityPoster } from './types';
+import { WiFiPackage, CoverageArea, FAQItem, BlogPost, CareerOpportunity, Testimonial, TeamMember, CommunityPoster, CCTVPackage } from './types';
 
 export const HOME_PACKAGES: WiFiPackage[] = [
   { speed: '2 Mbps', price: '1,000', type: 'home', badge: 'Coming Soon', features: ['Unlimited Data', '24/7 Support', '2-3 Devices'] },
@@ -19,6 +19,32 @@ export const BUSINESS_PACKAGES: WiFiPackage[] = [
   { speed: '25 Mbps', price: '5,000', type: 'business', features: ['Priority Support', 'Static IP Available', 'Medium Enterprise', 'Heavy Database Usage'] },
   { speed: '30 Mbps', price: '6,000', type: 'business', features: ['Priority Support', 'Static IP Included', 'High Demand Office', 'Large Team Support'] },
   { speed: '100+ Mbps', price: '200/Mbps', type: 'business', features: ['Custom Solutions', 'Fiber to the Office', 'Dedicated Account Manager', 'Enterprise Grade'] }
+];
+
+export const CCTV_PACKAGES: CCTVPackage[] = [
+  {
+    id: 'cctv-4',
+    name: '4-Camera Setup',
+    price: 'TBD',
+    features: ['4 HD Cameras (1080p)', '4-Channel DVR/NVR', '1TB Storage Included', 'Mobile App Viewing', 'Professional Installation'],
+    badge: 'Popular Choice',
+    image: '/cctv_real_1.jpeg'
+  },
+  {
+    id: 'cctv-8',
+    name: '8-Camera Setup',
+    price: 'TBD',
+    features: ['8 HD Cameras (1080p/4MP)', '8-Channel DVR/NVR', '2TB Storage Included', 'Advanced Motion Detection', 'Professional Installation'],
+    image: '/cctv_real_2.jpeg'
+  },
+  {
+    id: 'cctv-custom',
+    name: 'Custom Enterprise Setup',
+    price: 'TBD',
+    features: ['Unlimited IP Cameras', 'Network Video Recorder (NVR)', 'Extended Cloud Storage', 'PTZ / Dome / Bullet Cameras', 'Dedicated Site Survey'],
+    badge: 'Enterprise',
+    image: '/cctv_real_3.jpeg'
+  }
 ];
 
 export const COVERAGE_AREAS: CoverageArea[] = [
@@ -143,6 +169,61 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'February 12, 2024',
     image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=800',
     baseViews: 1420
+  },
+  {
+    id: 7,
+    title: 'Securing Our Community: Eco-Fibre Launches CCTV Installations',
+    excerpt: 'We are excited to announce our new professional CCTV installation services to keep your homes and businesses safe.',
+    content: "At Eco-Fibre, our mission has always been to connect our community. But connectivity goes hand-in-hand with safety. That's why we are thrilled to announce our expansion into professional CCTV security installations. Whether you need a simple 4-camera setup for your home in Rongo, or an enterprise-grade NVR system for your business in Awendo, our expert technicians are ready to secure what matters most to you. Combined with our ultra-fast fiber internet, you can now monitor your property in high-definition from anywhere in the world, directly from your smartphone.",
+    author: 'Ronny Winstone',
+    category: 'Security',
+    date: 'April 5, 2024',
+    image: '/cctv_real_4.jpeg',
+    baseViews: 856
+  },
+  {
+    id: 8,
+    title: 'Protecting Your Livelihood: Why Every Kenyan SME Needs CCTV',
+    excerpt: 'For small and medium enterprises, security is a non-negotiable asset. Discover how our CCTV solutions protect your business.',
+    content: "Running a business in Kenya comes with its unique set of challenges, and securing your premises shouldn't be one of them. For SME owners in Migori and Kisii, a reliable CCTV system is more than just a deterrent to theft; it's a tool for operational efficiency. From monitoring stock movement to ensuring staff safety during late hours, our high-definition cameras give you eyes on your business even when you are away. With Eco-Fibre's dedicated business internet, you can stream live footage to your tablet without buffering.",
+    author: 'Marcus Otieno',
+    category: 'Business',
+    date: 'April 12, 2024',
+    image: '/cctv_real_6.jpeg',
+    baseViews: 712
+  },
+  {
+    id: 9,
+    title: 'Home Security in Migori: Peace of Mind with Modern CCTV',
+    excerpt: 'A look into how residential estates in South Nyanza are upgrading their security with affordable dome cameras.',
+    content: "Your home should be your safest haven. With the rise of modern residential developments in Rongo and Awendo, homeowners are increasingly prioritizing security. Modern dome cameras provide a 360-degree view and feature advanced night vision capabilities, perfect for our beautiful but dark African nights. Our residential CCTV packages are designed to blend seamlessly with your home's aesthetics while providing robust, weather-resistant security 24/7.",
+    author: 'Sarah Wanjiku',
+    category: 'Guides',
+    date: 'April 18, 2024',
+    image: '/cctv_real_5.jpeg',
+    baseViews: 920
+  },
+  {
+    id: 10,
+    title: 'The Eco-Fibre Difference: Professional CCTV Installation You Can Trust',
+    excerpt: 'Installing a security system is delicate work. Learn why using certified professionals guarantees longevity and reliability.',
+    content: "Many people try the DIY approach for security cameras, only to face issues with poor cabling, blind spots, or complete system failures during power fluctuations. At Eco-Fibre, our certified technicians approach CCTV installation with the same precision we apply to fiber optics. We conduct thorough site surveys to eliminate blind spots, ensure proper weatherproofing for exterior cables, and configure your network for maximum security against cyber threats.",
+    author: 'David Omondi',
+    category: 'Technology',
+    date: 'April 25, 2024',
+    image: '/cctv_blog_3.png',
+    baseViews: 645
+  },
+  {
+    id: 11,
+    title: 'Monitor Your Home from Anywhere: The Power of Smart CCTV Apps',
+    excerpt: 'Gone are the days of staring at a bulky monitor. Modern CCTV puts the power of surveillance right in your pocket.',
+    content: "Imagine being on a business trip in Nairobi and being able to check on your home in Rongo with just a tap on your smartphone. Modern CCTV systems are fully integrated with smart mobile apps, allowing you to view live grids, playback recorded footage, and even receive instant motion-detection alerts. Our seamless installation ensures that your cameras connect flawlessly to your Eco-Fibre WiFi, delivering crisp, real-time video directly to your phone, no matter where you are.",
+    author: 'Ashley Onkendi',
+    category: 'Innovation',
+    date: 'May 2, 2024',
+    image: '/cctv_blog_4.png',
+    baseViews: 1105
   }
 ];
 

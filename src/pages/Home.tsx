@@ -68,7 +68,7 @@ export default function Home() {
             >
               <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 shadow-2xl">
                 <span className="w-2.5 h-2.5 rounded-full bg-green-500 shadow-[0_0_12px_rgba(34,197,94,0.6)] animate-pulse"></span>
-                <span className="text-xs font-black text-white uppercase tracking-[0.2em] leading-none">Cheapest Unlimited Internet in Rongo & Awendo</span>
+                <span className="text-xs font-black text-white uppercase tracking-[0.2em] leading-none">Unlimited Internet & Pro CCTV Installations</span>
               </div>
               
               <h1 className="text-5xl md:text-7xl font-black font-display leading-[1.1] text-white mb-6 tracking-tight drop-shadow-2xl">
@@ -78,15 +78,15 @@ export default function Home() {
               </h1>
               
               <p className="text-2xl text-slate-200 mb-12 max-w-xl leading-relaxed font-medium drop-shadow-lg">
-                Experience the fastest and <span className="text-white font-bold underline decoration-primary-orange decoration-4 underline-offset-8">cheapest fiber internet</span> in Rongo Town, Awendo, and Kisii. Unlimited data from KSh 1,000/mo.
+                Experience the fastest and <span className="text-white font-bold underline decoration-primary-orange decoration-4 underline-offset-8">cheapest fiber internet</span> along with <span className="text-white font-bold underline decoration-blue-500 decoration-4 underline-offset-8">professional CCTV</span> installations in Rongo Town, Awendo, and Kisii.
               </p>
 
               {/* Icon Benefits */}
               <div className="flex flex-wrap gap-8 mb-14">
                 {[
                   { icon: Zap, label: "Unlimited", color: "bg-primary-orange" },
-                  { icon: Shield, label: "Reliable", color: "bg-blue-600" },
-                  { icon: Headphones, label: "24/7 Local", color: "bg-purple-600" }
+                  { icon: Shield, label: "CCTV Security", color: "bg-blue-600" },
+                  { icon: Headphones, label: "24/7 Support", color: "bg-purple-600" }
                 ].map((benefit, idx) => (
                   <div key={idx} className="flex items-center gap-4">
                     <div className={`w-14 h-14 rounded-2xl ${benefit.color} flex items-center justify-center shadow-xl`}>
@@ -163,14 +163,14 @@ export default function Home() {
               { 
                 icon: <Target size={32} />, 
                 title: 'Our Mission', 
-                desc: 'To deliver innovative, customer-focused internet solutions that enhance communication, education, business growth, and community development through reliable fibre optic connectivity.',
+                desc: 'To deliver innovative, customer-focused internet and security solutions that enhance communication, business growth, and safety through reliable fibre connectivity and CCTV.',
                 image: '/mission.png',
                 color: 'text-primary-orange'
               },
               { 
                 icon: <Eye size={32} />, 
                 title: 'Our Vision', 
-                desc: 'To be the most trusted provider of affordable, high-speed fibre internet solutions in East Africa, empowering individuals, businesses, and communities to thrive in the digital age.',
+                desc: 'To be the most trusted provider of affordable, high-speed fibre internet and modern CCTV solutions in East Africa, empowering communities to thrive safely in the digital age.',
                 image: '/vision.png',
                 color: 'text-primary-blue'
               },
@@ -221,7 +221,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { icon: <Zap size={32} />, title: 'Ultra Fast', desc: 'Symmetrical speeds for both uploads and downloads.', color: 'bg-orange-100 text-orange-600' },
-              { icon: <Shield size={32} />, title: 'Reliable', desc: '99.9% uptime guaranteed with our redundant network.', color: 'bg-blue-100 text-blue-600' },
+              { icon: <Shield size={32} />, title: 'Top Security', desc: 'State-of-the-art CCTV installations to keep you safe.', color: 'bg-blue-100 text-blue-600' },
               { icon: <Headphones size={32} />, title: 'Local Support', desc: 'Our team is right here in Rongo to help you 24/7.', color: 'bg-purple-100 text-purple-600' }
             ].map((feature, i) => (
               <motion.div 
@@ -265,6 +265,100 @@ export default function Home() {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CCTV & Security Solutions Section */}
+      <section className="py-24 bg-slate-50 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-600/5 -skew-x-12 transform origin-top"></div>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest shadow-sm">
+                <Shield size={14} className="mr-2" /> Complete Security Solutions
+              </div>
+              
+              <h3 className="text-4xl md:text-5xl font-black font-display text-slate-900 leading-tight">
+                Protect What Matters <br /> 
+                <span className="text-blue-600">With Premium CCTV.</span>
+              </h3>
+              
+              <p className="text-xl text-slate-600 leading-relaxed font-medium">
+                High-speed internet is only half the equation. We provide enterprise-grade CCTV installations that integrate seamlessly with your Eco-Fibre network, ensuring you can monitor your home or business in real-time, from anywhere.
+              </p>
+
+              <div className="space-y-4 pt-4">
+                {[
+                  'Crystal Clear 1080p & 4K Resolution',
+                  '24/7 Mobile App Monitoring',
+                  'Advanced Motion Detection Alerts',
+                  'Expert Installation with No Blind Spots'
+                ].map((feature, idx) => (
+                  <div key={idx} className="flex items-center gap-4">
+                    <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                      <Check size={16} className="text-blue-600" />
+                    </div>
+                    <span className="text-lg font-bold text-slate-700">{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="pt-6">
+                <Link 
+                  to="/packages"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold text-lg shadow-xl shadow-blue-500/30 hover:bg-blue-700 hover:scale-105 transition-all group"
+                >
+                  View CCTV Packages
+                  <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Images */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative h-[600px] w-full"
+            >
+              {/* Primary Image */}
+              <div className="absolute right-0 top-0 w-4/5 h-[450px] rounded-[40px] overflow-hidden shadow-2xl border-8 border-white z-10 group">
+                <img 
+                  src="/cctv_premium_1.png" 
+                  alt="Enterprise CCTV Camera" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 text-white">
+                  <div className="flex items-center gap-2 mb-1">
+                    <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
+                    <span className="text-xs font-bold tracking-widest uppercase opacity-80">Live Feed Active</span>
+                  </div>
+                  <p className="font-bold">Exterior Coverage</p>
+                </div>
+              </div>
+
+              {/* Secondary Floating Image */}
+              <div className="absolute left-0 bottom-0 w-3/5 h-[350px] rounded-[32px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)] border-8 border-white z-20 group">
+                <img 
+                  src="/cctv_premium_2.png" 
+                  alt="Mobile CCTV Monitoring" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+
+              {/* Decorative Element */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-blue-600/20 rounded-full blur-3xl -z-10"></div>
+            </motion.div>
+
           </div>
         </div>
       </section>

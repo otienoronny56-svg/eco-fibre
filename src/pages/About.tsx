@@ -40,7 +40,7 @@ export default function About() {
               </h4>
               <div className="space-y-6 text-xl text-slate-700 leading-relaxed font-medium">
                 <p>
-                  Eco-Fibre Network Solution is a leading ICT infrastructure and fibre optic internet service provider headquartered in Awendo, with offices in Rongo and Nairobi. Established to bridge the digital divide in underserved communities, we specialize in fibre optic installations, network maintenance, internet service delivery, and digital customer support.
+                  Eco-Fibre Network Solution is a leading ICT infrastructure and fibre optic internet service provider headquartered in Awendo, with offices in Rongo and Nairobi. Established to bridge the digital divide and enhance security in our communities, we specialize in fibre optic installations, high-definition CCTV security systems, network maintenance, internet service delivery, and digital customer support.
                 </p>
                 <p>
                   Our presence in Migori County, coupled with our expanding regional footprint, positions us as a trusted partner for residential estates, businesses, and institutions seeking reliable connectivity.
